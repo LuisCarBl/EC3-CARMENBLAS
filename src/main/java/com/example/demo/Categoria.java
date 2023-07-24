@@ -48,5 +48,10 @@ public class Categoria {
     public void setInstrumentos(Set<Instrumento> instrumentos) {
         this.instrumentos = instrumentos;
     }
+
+    @Override
+    public String toString() {
+        return "Categoria [id=" + id + ", nombre=" + nombre + "]";
+    }
    
 }

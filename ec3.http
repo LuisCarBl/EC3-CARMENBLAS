@@ -1,4 +1,4 @@
-@server = https://luiscarbl-expert-space-lamp-6j7747j9vqwh546j-8080.preview.app.github.dev
+@server = https://ec3-carmenblas.onrender.com
 @api = {{server}}/api/ec3
 
 ################ Categorias: ################
