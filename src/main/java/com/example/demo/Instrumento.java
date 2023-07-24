@@ -11,18 +11,17 @@ import jakarta.persistence.CascadeType;
 
 @Entity
 @Table(name = "instrumento")
-public class Curso {
+public class Instrumento {
 
     @Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
-    private String nombre;
-    
+    private String nombre;   
 
     @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "id_categoria")
-    private Categoria categoria;
+    private Categoria categoria ;
 
     public Integer getId() {
         return id;
@@ -40,13 +39,12 @@ public class Curso {
         this.nombre = nombre;
     }
 
-
-    public Carrera getCarrera() {
-        return carrera;
+    public Categoria getCategoria() {
+        return categoria;
     }
 
-    public void setCarrera(Carrera carrera) {
-        this.carrera = carrera;
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 
     

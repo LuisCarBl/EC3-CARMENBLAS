@@ -8,7 +8,6 @@ import jakarta.persistence.Table;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OrderBy;
 
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -22,9 +21,9 @@ public class Categoria {
 
     private String nombre;
 
-    @OneToMany(targetEntity=Curso.class, mappedBy="categoria")
+    @OneToMany(targetEntity=Instrumento.class, mappedBy="categoria")
     @OrderBy("nombre ASC")
-    private Set<Instrumento> instrumentos = new HashSet<Curso>();
+    private Set<Instrumento> instrumentos = new HashSet<Instrumento>();
     
     public Integer getId() {
         return id;
@@ -49,10 +48,5 @@ public class Categoria {
     public void setInstrumentos(Set<Instrumento> instrumentos) {
         this.instrumentos = instrumentos;
     }
-
-    @Override
-    public String toString() {
-        return "Categoria [id=" + id + ", nombre=" + nombre + "]";
-    }
-    
+   
 }

@@ -1,0 +1,23 @@
+@server = https://luiscarbl-expert-space-lamp-6j7747j9vqwh546j-8080.preview.app.github.dev
+@api = {{server}}/api/ec3
+
+################ Categorias: ################
+###
+GET {{api}}/categorias
+###
+POST {{api}}/categorias
+Content-Type: application/json
+
+{"nombre": "Instrumentos de Viento"}
+################ Instrumentos: ################
+###
+GET {{api}}/instrumentos
+###
+POST {{api}}/instrumentos
+Content-Type: application/json
+
+{"nombre": "Trompeta", "categoria": "http://localhost/api/ec3/categorias/1"}
+###
+GET {{api}}/instrumentos/1/categoria
+###
+GET {{api}}/instrumentos?sort=nombre,desc
